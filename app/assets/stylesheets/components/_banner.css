@@ -1,0 +1,17 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1{
+
+  color: white;
+  text-align: center;
+}
+
+.banner p{
+  color:whitesmoke;
+  font-size: larger;
+  text-align: center;
+}

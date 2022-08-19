@@ -3,6 +3,12 @@
 
 <h2>My bookmarks</h2>
 <div class = "bookmark">
+
+
+<% @list.bookmarks.each do |bookmark| %>
+  <p><%= bookmark.comment %></p>
+<% end %>
+
 <% @list.bookmarks.each do |bookmark| %>
 <%= bookmark.comment %>
   <%= link_to "Delete",

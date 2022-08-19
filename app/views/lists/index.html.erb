@@ -1,5 +1,28 @@
 <h1>My lists</h1>
+<i class="fa-solid fa-popcorn"></i>
 
-<% @lists.each do |list| %>
-<%= list.name %>
-<% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://entrepreneurship.babson.edu/wp-content/uploads/2020/10/Movie-1200-630.jpg);">
+  <div class="container">
+    <h1>Save any kind of movies</h1>
+    <p>Classic</p>
+  </div>
+</div>
+
+<div class = "mylist">
+<h2>My lists</h2>
+</div>
+
+link_to lists_path do
+ ...html here
+end
+
+<div class="container">
+  <div class="movielists">
+    <% @lists.each do |list| %>
+    <div class="movietypes">
+      <%= image_tag "classic.png" , alt: "Le Wagon", width: 200 %>
+      <%= link_to list.name, lists_path%>
+      <% end %>
+    </div>
+  </div>
+</div>
