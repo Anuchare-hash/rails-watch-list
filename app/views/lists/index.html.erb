@@ -12,17 +12,17 @@
 <h2>My lists</h2>
 </div>
 
-link_to lists_path do
- ...html here
-end
 
-<div class="container">
-  <div class="movielists">
-    <% @lists.each do |list| %>
-    <div class="movietypes">
-      <%= image_tag "classic.png" , alt: "Le Wagon", width: 200 %>
-      <%= link_to list.name, lists_path%>
-      <% end %>
+  <div class="container">
+    <div class="movielists">
+      <div class="movietypes">
+        <% @lists.each do |list| %>
+          <h2><%= list.name %></h2>
+          <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
+      </div>
+       <% end %>
     </div>
+
   </div>
-</div>
+
+  <p><%= link_to "Add your list",  new_list_path %></p>
